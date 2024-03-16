@@ -7,6 +7,7 @@ import FlipCard from "./FlipCard";
 
 const Look = ({ images, route, introText, pageNumber }) => {
   const [shuffledFruits, setShuffledFruits] = useState([]);
+  const [allowFlip, setAllowFlip] = useState("pink");
 
   useEffect(() => {
     // Extract fruit image URLs from the images object
@@ -117,12 +118,12 @@ const Look = ({ images, route, introText, pageNumber }) => {
         <div className="absolute top-[20%] left-0 right-0 mx-auto max-w-[85%] mx-auto flex flex-wrap justify-between p-4">
           <div className="flex max-w-[50%] justify-around flex-wrap mx-auto pr-[20px]">
             {shuffledFruits.map((image, index) => (
-              <FlipCard key={index} images={images} image={image} type="pink" />
+              <FlipCard key={index} images={images} image={image} type="pink" allowFlip={allowFlip} setAllowFlip={setAllowFlip} />
             ))}
           </div>
           <div className="flex max-w-[50%] justify-around flex-wrap mx-auto pl-[20px]">
             {shuffledFruits.map((image, index) => (
-              <FlipCard key={index} images={images} image={image} type="blue" />
+              <FlipCard key={index} images={images} image={image} type="blue" allowFlip={allowFlip} setAllowFlip={setAllowFlip} />
             ))}
           </div>
         </div>

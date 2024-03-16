@@ -1,6 +1,6 @@
 import Look from "../components/Look";
 import backImg from "../assets/back.png";
-import bananaImg from "../assets/banana-2.png";
+import bananaCardImg from "../assets/banana-2.png";
 import playImg from "../assets/play.png";
 import oneImg from "../assets/1.png";
 import twoImg from "../assets/2.png";
@@ -12,7 +12,7 @@ import groupCardImg from "../assets/groupCard.png";
 
 const images = {
   backImg,
-  bananaImg,
+  bananaCardImg,
   playImg,
   oneImg,
   twoImg,

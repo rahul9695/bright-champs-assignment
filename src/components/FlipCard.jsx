@@ -2,35 +2,18 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import "../App.css";
 
-const FlipCard = ({ images, image, type, key }) => {
+const FlipCard = ({ images, image, type, key, allowFlip, setAllowFlip }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isPinkCardFlipped, setIsPinkCardFlipped] = useState(false);
-  const [isBlueCardFlipped, setIsBlueCardFlipped] = useState(false); 
+  const [isBlueCardFlipped, setIsBlueCardFlipped] = useState(false);
   const [flippedCardKey, setFlippedCardKey] = useState(null);
 
   const handleClick = (type, key) => {
-    if (type === "pink" && !isPinkCardFlipped && !isBlueCardFlipped) {
-      // Flip the pink card only if no other pink or blue card is flipped
+    if(type === allowFlip) {
       setIsFlipped(true);
-      setIsPinkCardFlipped(true);
-      setFlippedCardKey(key);
-    } else if (type === "blue" && !isPinkCardFlipped) {
-      // Flip the blue card only if no pink card is flipped
-      setIsFlipped(true);
-      setIsBlueCardFlipped(true);
-      setFlippedCardKey(key);
-    } else if (type === "blue" && isPinkCardFlipped && key === flippedCardKey) {
-      // If a pink card is flipped and it matches the current blue card, keep both cards flipped
-      setIsFlipped(true);
-      setIsBlueCardFlipped(true);
-      setIsPinkCardFlipped(true);
-    } else {
-      // If any other condition is not met, reflip both cards to their original state
-      setIsFlipped(false);
-      setIsPinkCardFlipped(false);
-      setIsBlueCardFlipped(false);
-      setFlippedCardKey(null);
+      setAllowFlip(allowFlip === "blue" ? "pink" : "blue");
     }
+    return;
   };
   
 

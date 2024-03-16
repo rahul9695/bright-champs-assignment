@@ -5,7 +5,7 @@ import startImg from "../assets/start.png";
 import nextImg from "../assets/next.png";
 import backImg from "../assets/back.png";
 import yesImg from "../assets/yes.png";
-import bananaImg from "../assets/banana-2.png";
+import bananaCardImg from "../assets/banana-2.png";
 
 const images = {
   happyMonkey,
@@ -14,7 +14,7 @@ const images = {
   nextImg,
   backImg,
   yesImg,
-  bananaImg
+  bananaCardImg
 };
 
 let introText = "Can you help me get some? 🤔";
