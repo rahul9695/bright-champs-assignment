@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  background: url(./assets/bg1.png);
+  width: 100%;
+  height: 100vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  /* z-index: -2; */
+  font-family: Nunito, sans-serif;
+}
+
+.happyMonkey {
+  width: 400px;
+  /* z-index: 1; */
+}
+
+.imgContainer {
+  position: absolute;
+  bottom: 7%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: max-content;
+}
+
+.msgBoxImgWrapper {
+  position: absolute;
+  right: -50%;
+  top: -28%;
+  /* z-index: -1; */
+}
+
+.msgBoxImg {
+  width: 400px;
+}
+
+.startImgWrapper {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  cursor: pointer;
+}
+
+.startImgWrapper img {
+  width: 180px;
+}
+
+h2 {
+  width: 70%;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  color: rgb(17, 174, 198);
+  font-weight: 800;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+
+.backBtnWrapper {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  cursor: pointer;
+}
+
+.backBtnWrapper img {
+  width: 80px;
+}
+
+.progressBarWrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 4%;
+  margin: 0 auto;
+  width: 50%;
+  max-width: 550px;
+  min-width: 200px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 30px;
+  background-color: rgb(223, 247, 255);
+  border-radius: 10px;
+}
+
+.progressBarWrapper img {
+  width: 100px;
+  position: absolute;
+  right: -30px;
+  top: -20px;
+}
+
+.flipCard {
+  transform: rotateY(180deg);
+  transition: .5s ease-in-out;
+}
